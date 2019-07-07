@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#DEBHELPER#
+
+# preinst script for lightdm-modified-init
+
+#set -e
+
+case "$1" in
+  install|upgrade) dpkg-divert --quiet                                               \
+                               --add                                                 \
+                               --package lightdm-modified-init            \
+                               --rename                              \
+                               --divert /etc/init.d/lightdm.dpkg-distrib \
+                               /etc/init.d/lightdm
+                   ;;
+
+                *) :
+                   ;;
+esac 
+
+exit 0

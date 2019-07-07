@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#DEBHELPER#
+
+# postrm script for lightdm-modified-init
+
+#set -e
+
+case "$1" in
+  purge|remove) dpkg-divert --quiet                                               \
+                            --remove                                              \
+                            --package lightdm-modified-init               \
+                            --rename       \
+                            --divert /etc/init.d/lightdm.dpkg-distrib \
+                            /etc/init.d/lightdm
+                ;;
+
+             *) :
+                ;;
+esac 
+
+exit 0
