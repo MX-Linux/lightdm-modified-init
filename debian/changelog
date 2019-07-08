@@ -1,3 +1,9 @@
+lightdm-modified-init (19.07.01) mx; urgency=medium
+
+  * modifie postinst to reset symlinks 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 07 Jul 2019 21:40:21 -0400
+
 lightdm-modified-init (19.06.01) mx; urgency=medium
 
   * Initial release
