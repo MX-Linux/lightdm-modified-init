@@ -57,13 +57,22 @@ case "$1" in
      tsplash="/live/bin/tsplash"
      if [ -x "$tsplash" -a -d /live/config/tsplash ]; then
          case $(runlevel) in
-                 *0) openvt -c10 $tsplash shutdown ;;
-                 *6) openvt -c10 $tsplash reboot   ;;
+                 *0) openvt -s -c10 $tsplash shutdown 
+				      exit 0
+				      ;;
+                 *6) openvt -s -c10 $tsplash reboot  
+                      exit 0 
+                      ;;
          esac
-         chvt 10
-     else
-         chvt 1
      fi
+     case $(runlevel) in
+                 *0) chvt 7
+				      exit 0
+				      ;;
+                 *6) chvt 7
+                      exit 0 
+                      ;;
+         esac
   ;;
   reload)
         log_daemon_msg "Scheduling reload of Light Display Manager configuration" "lightdm"
