@@ -48,6 +48,8 @@ case "$1" in
         fi
   ;;
   stop)
+  #check to see if lightdm is running, filter out grep search.  if not, don't do anything
+  if [ -n "$(ps -aux |grep  /usr/sbin/lightdm |grep -v grep)" ]; then
   	log_daemon_msg "Stopping Light Display Manager" "lightdm"
         set +e
 	start-stop-daemon --stop --quiet --pidfile /var/run/lightdm.pid \
@@ -72,7 +74,10 @@ case "$1" in
                  *6) chvt 7
                       exit 0 
                       ;;
-         esac
+     esac
+  fi
+	 exit 0
+	 
   ;;
   reload)
         log_daemon_msg "Scheduling reload of Light Display Manager configuration" "lightdm"
