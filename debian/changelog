@@ -1,3 +1,21 @@
+lightdm-modified-init (20.01.02) mx; urgency=medium
+
+  * change test to /live/linux  
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 22 Jan 2020 19:52:26 -0500
+
+lightdm-modified-init (20.01.01+2) mx; urgency=medium
+
+  * fix typo
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 21 Jan 2020 22:35:36 -0500
+
+lightdm-modified-init (20.01.01) mx; urgency=medium
+
+  * tweak for live system 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 21 Jan 2020 22:28:32 -0500
+
 lightdm-modified-init (19.11.02) mx; urgency=medium
 
   * minor modification to lightdm check 
