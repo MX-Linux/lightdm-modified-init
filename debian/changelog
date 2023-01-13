@@ -1,3 +1,9 @@
+lightdm-modified-init (23.01.02) mx; urgency=medium
+
+  * fix lightdm-xsessions.desktop location
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 12 Jan 2023 19:24:04 -0500
+
 lightdm-modified-init (23.01.01) mx; urgency=medium
 
   * add divert on lightdm-xsessions.desktop 
