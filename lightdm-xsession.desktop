@@ -4,4 +4,3 @@ Name=Default Xsession
 Exec=default
 Icon=
 Type=Application
-NoDisplay=true

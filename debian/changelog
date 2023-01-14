@@ -1,3 +1,9 @@
+lightdm-modified-init (23.01.03+1mx19) mx; urgency=medium
+
+  * remove override for mx19 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 14 Jan 2023 17:41:32 -0500
+
 lightdm-modified-init (23.01.02) mx; urgency=medium
 
   * fix lightdm-xsessions.desktop location
