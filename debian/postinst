@@ -9,13 +9,6 @@
 case "$1" in
   install|upgrade) update-rc.d lightdm remove
 				   update-rc.d ligthdm defaults
-				   
-				   dpkg-divert --quiet                                               \
-                            --remove                                              \
-                            --package lightdm-modified-init               \
-                            --rename       \
-                            --divert /usr/share/xsessions/lightdm-xsession.desktop.dpkg-distrib \
-                            /usr/share/xsessions/lightdm-xsession.desktop
                    ;;
 
                 *) :

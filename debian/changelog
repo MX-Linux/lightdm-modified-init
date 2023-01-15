@@ -1,3 +1,9 @@
+lightdm-modified-init (23.01.03+2mx19) mx; urgency=medium
+
+  * fix maintainer script
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 15 Jan 2023 10:17:38 -0500
+
 lightdm-modified-init (23.01.03+1mx19) mx; urgency=medium
 
   * remove override for mx19 
