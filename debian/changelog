@@ -1,3 +1,10 @@
+lightdm-modified-init (23.01.03) mx; urgency=medium
+
+  * add hibernation check environemnt variable
+  * allows hibernation to work with swapfiles on luks 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 05 Oct 2023 22:38:36 -0400
+
 lightdm-modified-init (23.01.02) mx; urgency=medium
 
   * fix lightdm-xsessions.desktop location
