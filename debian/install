@@ -1,2 +1,1 @@
 lightdm  etc/init.d
-lightdm-xsession.desktop usr/share/xsessions/

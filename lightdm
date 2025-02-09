@@ -81,7 +81,7 @@ case "$1" in
                       ;;
          esac
      fi
-     [ -d /live/linux ] &&  CHVT=1 || CHVT=7
+     [ -d /live/linux ] &&  CHVT=1 || CHVT=8
      case $(runlevel) in
                  *0)  chvt $CHVT
                       exit 0

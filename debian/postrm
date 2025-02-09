@@ -10,16 +10,10 @@ case "$1" in
   purge|remove) dpkg-divert --quiet                                               \
                             --remove                                              \
                             --package lightdm-modified-init               \
-                            --rename       \
+                            --no-rename       \
                             --divert /etc/init.d/lightdm.dpkg-distrib \
                             /etc/init.d/lightdm
                             
-                            dpkg-divert --quiet                                               \
-                            --remove                                              \
-                            --package lightdm-modified-init               \
-                            --rename       \
-                            --divert /usr/share/xsessions/lightdm-xsession.desktop.dpkg-distrib \
-                            /usr/share/xsessions/lightdm-xsession.desktop
                 ;;
 
              *) :

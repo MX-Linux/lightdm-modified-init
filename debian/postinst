@@ -8,11 +8,30 @@
 
 case "$1" in
   install|upgrade) update-rc.d lightdm remove
-				   update-rc.d ligthdm defaults
+				   update-rc.d lightdm defaults
+				
                    ;;
 
                 *) :
                    ;;
 esac 
+
+#remove divert for future
+                   # check for divert
+                   if [ -n "$(dpkg-divert --list |grep lightdm-xsession.desktop)" ]; then
+                   # if divert exists, check for dpkg-distrib file, copy if doesn't exist
+                   	if [ -e /usr/share/xsessions/lightdm-xsession.desktop.dpkg-distrib ]; then            
+                   		#make sure file is enabled
+                   		sed -i 's/NoDisplay=true/NoDisplay=false/' /usr/share/xsessions/lightdm-xsession.desktop.dpkg-distrib
+                   	fi
+                   #remove the divert, restoring the file to lightdm package
+                   #do not rename, 
+                               dpkg-divert --quiet                                               \
+                               --remove                                                 \
+                               --package lightdm-modified-init            \
+                               --rename                              \
+                               --divert /usr/share/xsessions/lightdm-xsession.desktop.dpkg-distrib \
+                              /usr/share/xsessions/lightdm-xsession.desktop
+                   fi
 
 exit 0
