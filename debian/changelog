@@ -1,3 +1,9 @@
+lightdm-modified-init (25.10.01) mx; urgency=medium
+
+  * don't start systemd-logind if elogind is also installed
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 28 Oct 2025 20:17:07 -0400
+
 lightdm-modified-init (25.02.01) mx; urgency=medium
 
   * remove divert on lightdm-xsession
